@@ -27,6 +27,12 @@ public final class Negociacao {
 		this.data = data;
 	}
 	
+	public boolean isMesmoDia(LocalDateTime outraData) {
+		return this.data.getDayOfMonth() == outraData.getDayOfMonth() &&
+				this.data.getMonth() == outraData.getMonth() &&
+						this.data.getYear() == outraData.getYear();
+	}
+	
 	public double getPreco() {
 		return preco;
 	}
