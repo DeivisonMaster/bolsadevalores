@@ -1,4 +1,4 @@
-package br.com.argentum.testes;
+package br.com.argentum.model;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

@@ -41,12 +41,18 @@
 			<version>2.2.8-02</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<!-- PRIMEFACES 6.0 -->
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
 			<version>6.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.4.9</version>
 		</dependency>
 	</dependencies>
 </project>

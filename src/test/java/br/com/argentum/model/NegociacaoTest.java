@@ -1,4 +1,4 @@
-package br.com.argentum.testes;
+package br.com.argentum.model;
 
 import static org.junit.jupiter.api.Assertions.*;
 
