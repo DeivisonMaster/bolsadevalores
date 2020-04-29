@@ -1,6 +1,7 @@
 package br.com.argentum.model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CandlestickFactory {
@@ -27,6 +28,31 @@ public class CandlestickFactory {
 		}
 		
 		return new Candlestick(abertura, fechamento, maximo, minimo, volume, data); 
+	}
+
+	public List<Candlestick> constroiCandlesticks(List<Negociacao> negociacoes) {
+		List<Candlestick> candlestick = new ArrayList<>();
+		List<Negociacao> negociacoesDia = new ArrayList<>();
+		LocalDateTime dataAtual = negociacoes.get(0).getData();
+		
+		for (Negociacao negociacao : negociacoes) {
+			if(negociacao.isMesmoDia(dataAtual)) {
+				negociacoesDia.add(negociacao);
+				
+			}else {
+				Candlestick candle = geraCandleParaData(negociacoesDia, dataAtual);
+				candlestick.add(candle);
+				
+				negociacoesDia = new ArrayList<>();
+				dataAtual = negociacao.getData();
+			}
+			
+		}
+		
+		Candlestick candle = geraCandleParaData(negociacoesDia, dataAtual);
+		candlestick.add(candle);
+		
+		return candlestick;
 	}
 }
 

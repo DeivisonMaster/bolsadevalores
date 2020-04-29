@@ -14,6 +14,7 @@ public class LeitorXML {
 	
 	public List<Negociacao> carrega(InputStream inputStream){
 		XStream stream = new XStream(new DomDriver());
+		
 		stream.registerLocalConverter(Negociacao.class, "data", new LocalDateTimeConverter());
 		stream.alias("negociacao", Negociacao.class);
 		

@@ -15,7 +15,7 @@ public final class Negociacao {
 		}
 		
 		if(quantidade < 0) {
-			throw new IllegalArgumentException("A quantidade não pode ser nula");
+			throw new IllegalArgumentException("A quantidade não pode ser menor que 0");
 		}
 		
 		if(data == null) {

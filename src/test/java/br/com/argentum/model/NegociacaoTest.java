@@ -1,7 +1,5 @@
 package br.com.argentum.model;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.time.LocalDateTime;
 
 import org.junit.Test;

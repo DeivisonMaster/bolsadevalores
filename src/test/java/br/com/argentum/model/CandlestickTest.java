@@ -1,12 +1,10 @@
 package br.com.argentum.model;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.LocalDateTime;
 
+import org.junit.Assert;
 import org.junit.Test;
-
-import junit.framework.Assert;
 
 
 public class CandlestickTest {
