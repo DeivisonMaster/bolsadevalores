@@ -24,9 +24,8 @@ public class ClientWebService {
 			connection = (HttpURLConnection) url.openConnection();
 			
 			InputStream stream = connection.getInputStream();
-			List<Negociacao> fluxo = new LeitorXML().carrega(stream);
 			
-			return fluxo;
+			return new LeitorXML().carrega(stream);
 			
 		} catch (IOException e) {
 			throw new RuntimeException(e);
@@ -35,6 +34,7 @@ public class ClientWebService {
 			connection.disconnect();
 		}
 	}
+	
 	
 	public static void main(String[] args) {
 		ClientWebService client = new ClientWebService();
@@ -46,4 +46,5 @@ public class ClientWebService {
 		}
 		
 	}
+	
 }

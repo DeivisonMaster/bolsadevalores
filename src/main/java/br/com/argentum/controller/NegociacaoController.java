@@ -13,9 +13,14 @@ import br.com.argentum.ws.ClientWebService;
 @ViewScoped
 public class NegociacaoController implements Serializable{
 	private static final long serialVersionUID = 1L;
+	
+	private List<Negociacao> negociacoes;
 
+	public NegociacaoController() {
+		this.negociacoes = new ClientWebService().getNegociacoes();
+	}
 	
 	public List<Negociacao> getNegociacoes(){
-		return new ClientWebService().getNegociacoes();
+		return this.negociacoes; 
 	}
 }
