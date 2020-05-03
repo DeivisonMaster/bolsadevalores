@@ -31,6 +31,7 @@ public class CandlestickFactoryTest {
 		Assert.assertEquals(40.0, candlestick.getAbertura(), 0.000001);
 		Assert.assertEquals(20.0, candlestick.getFechamento(), 0.000001);
 		Assert.assertEquals(14000.0, candlestick.getVolume(), 0.000001);
+		
 	}
 
 	@Test

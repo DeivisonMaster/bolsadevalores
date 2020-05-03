@@ -1,0 +1,21 @@
+1 SÉRIE TEMPORAL:
+
+É o conjunto de candlestick sendo possivel extrair indicadores de cada candlestick ou de todos
+
+Indicadores:
+
+- máximo
+- minimo
+- abertura
+=======================================================================================================================
+2 Indicador: Média Móvel Simples
+
+É a média de valores de determinado indicador de candlesticks, ex:
+obter média dos indicadores de fechamento de 3 candlestick distintos e dividir. (40,00 + 60,00 + 60,00) / 3 = 53,33
+Média Móvel porque é possivel obter o calculo da média dos três proximos valores  
+
+=======================================================================================================================
+3 Indicador: Média Móvel Ponderada
+
+É a média de valores de determinado indicador de candlestick atraves de ponderações para cada valor, ex:
+(40,00 x 1) + (60,00 x 2) + (60,00 x 3) / 6 = 56,66

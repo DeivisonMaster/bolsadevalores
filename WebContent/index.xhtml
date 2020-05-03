@@ -10,8 +10,11 @@
 	<title>Argentum</title>
 </h:head>
 <body>
+	
+	<p:chart type="line" model="#{negociacaoController.modeloGrafico}"/>
 
 	<h:form prependId="false" id="frmLogin">
+	
 		<p:dataTable var="negociacao" value="#{negociacaoController.negociacoes}"
 			paginator="true" rows="10" paginatorPosition="bottom" >
 			
